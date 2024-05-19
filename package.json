@@ -1,7 +1,7 @@
 {
-  "name": "first-template",
+  "name": "weather-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Creating a weather app by using the weather API",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",
