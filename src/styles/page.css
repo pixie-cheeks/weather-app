@@ -1,0 +1,12 @@
+:root {
+  --primary-color: hsl(236, 64%, 52%);
+  --secondary-color: hsl(0, 0%, 90%);
+}
+
+.page {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+}

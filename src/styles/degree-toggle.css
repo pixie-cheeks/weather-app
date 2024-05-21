@@ -1,0 +1,24 @@
+.degree-toggle {
+  font-size: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.degree-toggle__label {
+  display: block;
+  border: 1px solid var(--primary-color);
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  min-width: 12ch;
+  text-align: center;
+}
+
+.degree-toggle__input:checked + label {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.degree-toggle__input {
+  display: none;
+}

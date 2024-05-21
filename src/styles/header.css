@@ -1,0 +1,15 @@
+.header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 5rem;
+}
+
+.header__logo {
+  width: 5rem;
+  height: auto;
+}

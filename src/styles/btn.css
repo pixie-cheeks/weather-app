@@ -1,0 +1,18 @@
+.btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.1s ease-in;
+  font-size: 1.7rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  opacity: 1;
+}

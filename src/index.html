@@ -16,6 +16,31 @@
         <input type="text" placeholder="City Name" class="search-bar__input" />
         <button class="search-bar__btn btn">Search</button>
       </div>
+
+      <div class="card">
+        <div class="card__title js-location">London</div>
+        <img src="#" alt="" class="card__img js-weather-img" />
+        <div class="card__img-caption js-weather-condition">Rain</div>
+        <div class="card__temperature js-weather-temperature">15:</div>
+      </div>
+
+      <div class="degree-toggle">
+        <input
+          type="radio"
+          name="degrees"
+          id="celsius"
+          class="degree-toggle__input"
+          checked
+        />
+        <label for="celsius" class="degree-toggle__label">Celsius</label>
+        <input
+          type="radio"
+          name="degrees"
+          id="fahrenheit"
+          class="degree-toggle__input"
+        />
+        <label for="fahrenheit" class="degree-toggle__label">Fahrenheit</label>
+      </div>
     </main>
   </body>
 </html>

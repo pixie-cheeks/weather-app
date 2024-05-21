@@ -17,6 +17,4 @@ Once the MVP requirements are met.
 ## Data to use from weather api
 
 - Condition text & icon
-- apparent temperatures
-- feelslike temperatures
-- humidity and wind-speed
+- apparent temperature
