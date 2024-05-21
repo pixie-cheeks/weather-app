@@ -12,6 +12,11 @@
   border-radius: 5px;
   min-width: 12ch;
   text-align: center;
+  letter-spacing: 1px;
+  transition:
+    background-color,
+    color,
+    0.2s ease-in-out;
 }
 
 .degree-toggle__input:checked + label {

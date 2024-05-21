@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 :root {
   --primary-color: hsl(236, 64%, 52%);
   --secondary-color: hsl(0, 0%, 90%);
 }
 
 .page {
+  min-height: 100vh;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   font-size: 3rem;
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+.page__footer {
+  margin-top: auto;
 }

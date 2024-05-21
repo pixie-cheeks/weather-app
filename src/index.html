@@ -11,25 +11,30 @@
       <img src="images/weather-logo.png" alt="" class="header__logo" />
       <div class="header__text">Weather App</div>
     </header>
+
     <main class="page__main main">
       <div class="main__search-bar search-bar">
-        <input type="text" placeholder="City Name" class="search-bar__input" />
-        <button class="search-bar__btn btn">Search</button>
+        <input
+          type="text"
+          placeholder="City Name"
+          class="search-bar__input js-search-input"
+        />
+        <button class="search-bar__btn btn js-search-btn">Search</button>
       </div>
 
-      <div class="card">
+      <div class="card js-weather-card is-hidden">
         <div class="card__title js-location">London</div>
-        <img src="#" alt="" class="card__img js-weather-img" />
         <div class="card__img-caption js-weather-condition">Rain</div>
-        <div class="card__temperature js-weather-temperature">15:</div>
+        <img src="#" alt="" class="card__img js-weather-img" />
+        <div class="card__temperature js-temperature">15°C</div>
       </div>
 
-      <div class="degree-toggle">
+      <div class="degree-toggle js-degree-radios is-hidden">
         <input
           type="radio"
           name="degrees"
           id="celsius"
-          class="degree-toggle__input"
+          class="degree-toggle__input js-rad-inp"
           checked
         />
         <label for="celsius" class="degree-toggle__label">Celsius</label>
@@ -37,10 +42,24 @@
           type="radio"
           name="degrees"
           id="fahrenheit"
-          class="degree-toggle__input"
+          class="degree-toggle__input js-rad-inp"
         />
         <label for="fahrenheit" class="degree-toggle__label">Fahrenheit</label>
       </div>
     </main>
+    <footer class="footer page__footer">
+      <a
+        href="https://github.com/pixie-cheeks"
+        target="_blank"
+        class="footer__link"
+      >
+        <img
+          src="images/github-mark.png"
+          alt="The github cat icon."
+          class="footer__icon"
+        />
+        pixie-cheeks
+      </a>
+    </footer>
   </body>
 </html>

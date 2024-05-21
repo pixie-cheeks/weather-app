@@ -1,6 +1,6 @@
 const API_KEY = 'c9bab1f090994008ae262726241705';
 
-const getWeatherData = async (location) => {
+const fetchData = async (location) => {
   try {
     const response = await fetch(
       `https://api.weatherapi.com/v1/current.json?key=${API_KEY}` +
@@ -11,6 +11,20 @@ const getWeatherData = async (location) => {
     console.error(error);
     return 'Data not found';
   }
+};
+
+const getWeatherData = async (location) => {
+  const originalData = await fetchData(location);
+
+  if (originalData.error) return originalData;
+
+  return {
+    locationName: originalData.location.name,
+    conditionText: originalData.current.condition.text,
+    conditionIcon: originalData.current.condition.icon,
+    tempC: originalData.current.temp_c,
+    tempF: originalData.current.temp_f,
+  };
 };
 
 export default getWeatherData;
