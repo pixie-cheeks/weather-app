@@ -8,6 +8,8 @@ import {
   renderError,
   hideError,
   setTemperature,
+  showLoader,
+  hideLoader,
 } from './scripts/domController';
 
 const searchBtn = document.querySelector('.js-search-btn');
@@ -17,7 +19,11 @@ const processInput = async () => {
   const location = searchInput.value;
   if (location.trim() === '') return;
 
+  hideContent();
+  hideError();
+  showLoader();
   const weatherData = await getWeatherData(location);
+  hideLoader();
   if (weatherData.error) {
     hideContent();
     renderError(weatherData.error);

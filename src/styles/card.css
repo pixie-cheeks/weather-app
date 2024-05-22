@@ -3,10 +3,10 @@
   color: var(--secondary-color);
   border-radius: 8px;
   padding: 2rem;
+  min-width: 20ch;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: min(40%, 400px);
   font-size: 2.6rem;
 }
 

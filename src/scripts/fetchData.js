@@ -9,7 +9,7 @@ const fetchData = async (location) => {
     return await response.json();
   } catch (error) {
     console.error(error);
-    return 'Data not found';
+    return { error: { message: 'Unable to retrieve data.' } };
   }
 };
 

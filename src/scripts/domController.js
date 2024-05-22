@@ -5,6 +5,7 @@ const conditionTextDiv = document.querySelector('.js-weather-condition');
 const conditionImgDiv = document.querySelector('.js-weather-img');
 const temperatureDiv = document.querySelector('.js-temperature');
 const errorDiv = document.createElement('div');
+const loaderDiv = document.querySelector('.js-loader');
 let currentWeatherData = null;
 errorDiv.classList.add('error');
 errorDiv.classList.add('is-hidden');
@@ -18,6 +19,14 @@ const hideContent = () => {
 const showContent = () => {
   weatherCard.classList.remove('is-hidden');
   degreeRadios.classList.remove('is-hidden');
+};
+
+const showLoader = () => {
+  loaderDiv.classList.remove('is-hidden');
+};
+
+const hideLoader = () => {
+  loaderDiv.classList.add('is-hidden');
 };
 
 const setTemperature = () => {
@@ -53,4 +62,6 @@ export {
   renderError,
   hideError,
   setTemperature,
+  showLoader,
+  hideLoader,
 };
