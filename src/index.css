@@ -6,66 +6,9 @@
 @import 'styles/btn.css';
 @import 'styles/card.css';
 @import 'styles/degree-toggle.css';
-
-.main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-  padding: 4rem 0;
-  position: relative;
-  background: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.footer {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-}
-
-.footer__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  text-decoration: none;
-}
-
-.footer__link:hover {
-  color: #b9b5b5;
-}
-
-.footer__icon {
-  width: 25px;
-  height: auto;
-}
+@import 'styles/main.css';
+@import 'styles/footer.css';
 
 .is-hidden {
   display: none;
-}
-
-.main__loader {
-  margin-top: 5rem;
-  border: 16px solid #b9b5b5;
-  border-top: 16px solid var(--primary-color);
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
