@@ -54,7 +54,7 @@ const renderWeatherData = (data) => {
   currentWeatherData = data;
   locationDiv.textContent = data.locationName;
   conditionTextDiv.textContent = data.conditionText;
-  conditionImgDiv.src = data.conditionIcon;
+  conditionImgDiv.src = `https:${data.conditionIcon}`;
   setTemperature();
 };
 
