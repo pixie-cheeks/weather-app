@@ -1,3 +1,5 @@
+import { getGifLink } from './fetchData';
+
 const weatherCard = document.querySelector('.js-weather-card');
 const degreeRadios = document.querySelector('.js-degree-radios');
 const locationDiv = document.querySelector('.js-location');
@@ -5,6 +7,7 @@ const conditionTextDiv = document.querySelector('.js-weather-condition');
 const conditionImgDiv = document.querySelector('.js-weather-img');
 const temperatureDiv = document.querySelector('.js-temperature');
 const errorDiv = document.createElement('div');
+const mainDiv = document.querySelector('.main');
 const loaderDiv = document.querySelector('.js-loader');
 let currentWeatherData = null;
 errorDiv.classList.add('error');
@@ -55,6 +58,15 @@ const renderWeatherData = (data) => {
   setTemperature();
 };
 
+const hideBackgroundGIF = () => {
+  mainDiv.style.backgroundImage = '';
+};
+
+const setBackgroundGIF = async (query) => {
+  const gifLink = await getGifLink(query);
+  mainDiv.style.backgroundImage = `url(${gifLink})`;
+};
+
 export {
   renderWeatherData,
   showContent,
@@ -64,4 +76,6 @@ export {
   setTemperature,
   showLoader,
   hideLoader,
+  hideBackgroundGIF,
+  setBackgroundGIF,
 };

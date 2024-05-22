@@ -1,6 +1,6 @@
 /* eslint-disable import/no-import-module-exports */
 import './index.css';
-import getWeatherData from './scripts/fetchData';
+import { getWeatherData } from './scripts/fetchData';
 import {
   renderWeatherData,
   showContent,
@@ -10,6 +10,8 @@ import {
   setTemperature,
   showLoader,
   hideLoader,
+  setBackgroundGIF,
+  hideBackgroundGIF,
 } from './scripts/domController';
 
 const searchBtn = document.querySelector('.js-search-btn');
@@ -21,6 +23,7 @@ const processInput = async () => {
 
   hideContent();
   hideError();
+  hideBackgroundGIF();
   showLoader();
   const weatherData = await getWeatherData(location);
   hideLoader();
@@ -29,6 +32,7 @@ const processInput = async () => {
     renderError(weatherData.error);
     return;
   }
+  setBackgroundGIF(weatherData.conditionText);
   hideError();
   renderWeatherData(weatherData);
   showContent();

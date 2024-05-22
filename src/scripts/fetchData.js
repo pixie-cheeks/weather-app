@@ -27,4 +27,22 @@ const getWeatherData = async (location) => {
   };
 };
 
-export default getWeatherData;
+const GIF_API_KEY = 'JyGBtwCcEOqTVjjPAsWLFEbT9xDKSeni';
+
+const getGifLink = async (query) => {
+  try {
+    const response = await fetch(
+      `https://api.giphy.com/v1/gifs/translate?api_key=${GIF_API_KEY}` +
+        `&s=${query}`,
+    );
+
+    const gifData = await response.json();
+
+    return gifData.data.images.original.url;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+};
+
+export { getWeatherData, getGifLink };
